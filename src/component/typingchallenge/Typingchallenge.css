@@ -1,0 +1,62 @@
+.typing-challenge{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+.timer{
+    font-weight: 800;
+    font-size: 60px;
+    margin-top: 5px;
+    margin-bottom:-20px;
+    text-align: center;
+}
+.timer-info{
+    color: #ff1133;
+    font-size: 30px;
+    text-align: center;
+}
+.textarea-container{
+    /* margin: 16px; */
+    display: flex;
+    flex-direction: row;
+    /* min-height: 60vh; */
+    flex-grow: 1;
+    width: 80%;
+}
+.textarea-left,
+.textarea-right{
+    display: flex;
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.12) ,0 20px 20px rgba(0,0,0,0.26) ; */
+    border: 1px solid black;
+    color: #f10;
+    width: 50%;
+    margin-bottom: 40px;
+}
+.textarea{
+    overflow: scroll;
+    text-align: left;
+    flex-grow: 1;
+    line-height: 18px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 600px;
+    
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12) ,0 1px 2px rgba(0,0,0,0.26) ;
+    padding: 10px;
+    transition: all 0.2s;
+
+}
+
+.textarea:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12) ,0 10px 10px rgba(0,0,0,0.26) ;
+}
+
+.test-paragraph{
+    font-size:21px;
+    line-height: 32px;
+    padding:12px;
+    background-color:#e9e7e4;
+
+}
