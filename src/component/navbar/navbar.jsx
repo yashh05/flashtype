@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "C:/Users/lenovo/Desktop/projects/flashtype/src/assets/logo.png";
+import logo from "../../assets/logo.png"
 
 import "./nav.css";
 const Nav=()=>{

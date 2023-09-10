@@ -1,6 +1,6 @@
 import React from 'react';
 import "./landing.css";
-import flash from "C:/Users/lenovo/Desktop/projects/flashtype/src/assets/hero.png";
+import flash from "../../assets/hero.png";
 import Typewriter from 'typewriter-effect';
 
 export default function Landing() {

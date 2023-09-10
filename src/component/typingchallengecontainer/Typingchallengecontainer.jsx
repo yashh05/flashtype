@@ -1,6 +1,6 @@
 import React from 'react';
-import ChallengeDetailsCard from 'C:/Users/lenovo/Desktop/projects/flashtype/src/component/challengeDetailsCard/challengeDetailsCard';
-import Typingchallenge from 'C:/Users/lenovo/Desktop/projects/flashtype/src/component/typingchallenge/typingchallenge';
+import ChallengeDetailsCard from "../challengeDetailsCard/challengeDetailsCard"
+import Typingchallenge from '../typingchallenge/typingchallenge';
 
 import "./Typingchallengecontainer.css";
 const Typingchallengecontainer = (
