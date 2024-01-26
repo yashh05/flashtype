@@ -1,68 +1,21 @@
-// import React from 'react'
+import { useAppContext } from '../../context/AppContext';
 import TestLetter from '../testLetter/testLetter';
 import "./Typingchallenge.css";
 
 
-// const Typingchallenge = ({
-//   timeRemaining,
-//   timeStarted,
-//   testInfo, onchangeInput
-// }) => {
-//   return (
-//     <div className='typing-challenge'>
-//       <div className='timer-container'>
-//         <p className='timer'>00:{timeRemaining}</p>
-//         {/* {!timeStarted ?(<p className='timer-info'>start typing to start the Test!</p>):undefined} */}
-//         <p className='timer-info'>
-//           {!timeStarted && "start typing to start the Test!"}
-//         </p>
-//       </div>
-//       <div className='textarea-container'>/
-//         <div className='textarea-left'>
+const TypingChallenge = () => {
 
-//           <div className="textarea test-paragraph">
-//             {/* {selectedParagraph} */}
+    const {state,handleUserInput}= useAppContext();
 
-//             {testInfo && testInfo.map((indvidualLetterInfo, index) => {
-//               return (<TestLetter
-//                 key={index} 
-//                 indvidualLetterInfo={indvidualLetterInfo}
-//                 />
-//               );
-//             })
-//             }
-//           </div>
-
-//         </div>
-//         <div className='textarea-right'>
-//           <textarea className='textarea' placeholder='start typing here' onChange={(e) => onchangeInput(e.target.value)} />
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Typingchallenge; 
-
-import React from "react";
-// import TestLetter from "../TestLetter/TestLetter";
-// import "./TypingChallenge.css";
-
-const TypingChallenge = ({
-    testInfo,
-    onchangeInput,
-    timeRemaining,
-    timerStarted,
-}) => {
     return (
         <div className="typing-challenge">
             <div className="timer-container">
                 <p className="timer">
                     00:
-                    {timeRemaining >= 10 ? timeRemaining : `0${timeRemaining}`}
+                    {state.timeRemaining >= 10 ? state.timeRemaining : `0${state.timeRemaining}`}
                 </p>
                 <p className="timer-info">
-                    {!timerStarted && "Start typing to start the test"}
+                    {!state.timerStarted && "Start typing to start the test"}
                 </p>
             </div>
 
@@ -70,7 +23,7 @@ const TypingChallenge = ({
                 <div className="textarea-left ">
                     <div className="textarea test-paragraph">
                         {/* {selectedParagraph} */}
-                        {testInfo&&testInfo.map((individualLetterInfo) => (
+                        {state.testInfo&&state.testInfo.map((individualLetterInfo) => (
                             <TestLetter
                                 individualLetterInfo={individualLetterInfo}
                             />
@@ -79,7 +32,7 @@ const TypingChallenge = ({
                 </div>
                 <div className="textarea-right">
                     <textarea
-                        onChange={(e) => onchangeInput(e.target.value)}
+                        onChange={(e) => handleUserInput(e.target.value)}
                         className="textarea"
                         placeholder="Start typing here"
                     ></textarea>

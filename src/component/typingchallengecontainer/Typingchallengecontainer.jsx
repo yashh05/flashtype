@@ -1,27 +1,24 @@
-import React from 'react';
 import ChallengeDetailsCard from "../challengeDetailsCard/challengeDetailsCard"
 import Typingchallenge from '../typingchallenge/typingchallenge';
-
 import "./Typingchallengecontainer.css";
-const Typingchallengecontainer = (
-  { words,characters,wpm,selectedparagraph,timeRemaining,
-    timeStarted,testInfo,onchangeInput
-  }
-) => {
+import { useAppContext } from '../../context/AppContext';
+
+
+const Typingchallengecontainer = () => {
+
+  const {state}= useAppContext();
+
   return (
     <div className='typing-challenge-container'>
 
       <div className='details-container'>
-        <ChallengeDetailsCard type="words" detail={words} />
-        <ChallengeDetailsCard type="Character" detail={characters} />
-        <ChallengeDetailsCard type="Wpm" detail={wpm} />
+        <ChallengeDetailsCard type="words" detail={state.words} />
+        <ChallengeDetailsCard type="Character" detail={state.characters} />
+        <ChallengeDetailsCard type="Wpm" detail={state.wpm} />
       </div>
-
       <div className='typewriter-container'>
-     <Typingchallenge selectedparagraph={selectedparagraph} timeRemaining={timeRemaining} timeStarted={timeStarted} testInfo={testInfo} onchangeInput={onchangeInput}/>
+     <Typingchallenge />
       </div>
-    
-
     </div>
   )
 }

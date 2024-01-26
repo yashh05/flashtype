@@ -1,6 +1,8 @@
 import React from 'react'
 import "./challengeDetailsCard.css";
+import { useAppContext } from '../../context/AppContext';
 const ChallengeDetailsCard=({type,detail})=>{
+
   return (
     <div className='detail-card'>
     <div className="card-name" style={{fontFamily:"Poppins",fontWeight:"bold",letterSpacing:"3px",fontSize:"25px"}}>{type}</div>
